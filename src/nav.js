@@ -1,9 +1,8 @@
 import { Navigation } from "react-native-navigation";
-import FeedScreen from "./screens/feed-screen";
-import HomeScreen from "./screens/home-screen";
 
-Navigation.registerComponent(`navigation.screen.FeedScreen`, () => FeedScreen);
-Navigation.registerComponent(`navigation.screen.HomeScreen`, () => HomeScreen);
+import registerScreens from './screens/screens';
+
+registerScreens();
 
 export default class Nav {
   constructor() {
@@ -20,7 +19,7 @@ export default class Nav {
                   children: [
                     {
                       component: {
-                        name: 'navigation.screen.FeedScreen'
+                        name: 'navigation.FeedScreen'
                       }
                     }
                   ],
@@ -37,7 +36,7 @@ export default class Nav {
                   children: [
                     {
                       component: {
-                        name: 'navigation.screen.HomeScreen'
+                        name: 'navigation.HomeScreen'
                       }
                     }
                   ],
